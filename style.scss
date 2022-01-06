@@ -4,6 +4,7 @@
   Description: Software Landing Page
   Version: 1.0
 */
+@import "product";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Jost:wght@300;400;500;600;700;800;900&display=swap');
 :root {
   --clr-heading: #222222;
@@ -1278,7 +1279,7 @@ button.navbar-toggler:focus {
   .core-box .core-icon {
     margin-bottom: 2rem; }
   .core-box .core-desc h4 {
-    font-size: 18px; }
+    font-size: 16px; }
 
 /***inner-item***/
 .inner-item {
@@ -1418,6 +1419,7 @@ button.navbar-toggler:focus {
   position: absolute;
   left: 50%;
   min-width: 200px;
+  color: #fff;
   top: 50%;
   transform: translate(-50%, -50%); }
 
@@ -1912,5 +1914,14 @@ body.rtl-mode {
   .video-section,
   .last-section{
     padding: 60px 0;
+  }
+}
+
+@media(max-width: 767px){
+  .maan-details-content .product-cart-area{
+    display: block;
+    .right-side{
+      margin-top: 50px;
+    }
   }
 }
