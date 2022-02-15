@@ -469,6 +469,8 @@ label {
 
 .hero-btn a {
   width: 180px;
+  padding: 25px !important;
+  height: 80px;
   text-align: center; }
 
 .btn-4,
@@ -566,7 +568,8 @@ label {
       font-size: 30px;
       font-weight: 500 !important;
       border-radius: 17px !important;
-      padding: 30px;
+      padding: 20px;
+      height: 80px;
     }
     .btn-black::before{
       background: #e60c5e;
@@ -1924,4 +1927,45 @@ body.rtl-mode {
       margin-top: 50px;
     }
   }
+}
+
+@media(max-width: 575px){
+  .hero-single .hero-content .hero-title{
+    text-align: center;
+    min-height: 90px;
+    span{
+      display: block;
+    }
+  }
+  .hero-btn a {
+    width: 140px !important;
+    padding: 15px !important;
+    height: 50px;
+}
+.hero-single .hero-content .hero-btn {
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.maan-product-thumb .mySwiper2 {
+  height: 260px;
+}
+.maan-details-content .pricing-area h2{
+  font-size: 22px;
+}
+.plugins-support h1{
+  font-size: 60px;
+  top: 20px;
+}
+.video-section .wp-suport-items{
+  img {
+    min-height: 340px;
+    object-fit: cover;
+  }
+  i img{
+    min-height: unset;
+    object-fit: content;
+    height: auto;
+  }
+}
 }

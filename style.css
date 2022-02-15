@@ -2622,6 +2622,8 @@ label {
 
 .hero-btn a {
   width: 180px;
+  padding: 25px !important;
+  height: 80px;
   text-align: center;
 }
 
@@ -2736,7 +2738,8 @@ label {
   font-size: 30px;
   font-weight: 500 !important;
   border-radius: 17px !important;
-  padding: 30px;
+  padding: 20px;
+  height: 80px;
 }
 
 .btn-black::before {
@@ -4556,6 +4559,59 @@ body.rtl-mode .price-wpr {
   }
   .maan-details-content .product-cart-area .right-side {
     margin-top: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-single .hero-content .hero-title {
+    text-align: center;
+    min-height: 90px;
+  }
+  .hero-single .hero-content .hero-title span {
+    display: block;
+  }
+
+  .hero-btn a {
+    width: 140px !important;
+    padding: 15px !important;
+    height: 50px;
+  }
+
+  .hero-single .hero-content .hero-btn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .maan-product-thumb .mySwiper2 {
+    height: 260px;
+  }
+
+  .maan-details-content .pricing-area h2 {
+    font-size: 22px;
+  }
+
+  .plugins-support h1 {
+    font-size: 60px;
+    top: 20px;
+  }
+
+  .video-section .wp-suport-items img {
+    min-height: 340px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .video-section .wp-suport-items i img {
+    min-height: unset;
+    -o-object-fit: content;
+       object-fit: content;
+    height: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
