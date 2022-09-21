@@ -10,7 +10,73 @@
 
     $(document).on('ready', function() {
 
+	//* Isotope js
+            $(".protfoli_inner").imagesLoaded( function() {
+                $(".protfoli_inner").isotope({
+                    layoutMode: 'masonry',  
+                }); 
+            });  
+            
+            // Add isotope click function 
+            $(".categori-filter li").on('click',function(){
+                $(".categori-filter li").removeClass("active");
+                $(this).addClass("active"); 
+                var selector = $(this).attr("data-filter");
+                $(".protfoli_inner").isotope({
+                    filter: selector,
+                    animationOptions: {
+                        duration: 450,
+                        easing: "linear",
+                        queue: false,
+                    }
+                });
+                return false;
+            });  
 
+
+            $(".protfoli_inner1").imagesLoaded( function() {
+                $(".protfoli_inner1").isotope({
+                    layoutMode: 'masonry',  
+                }); 
+            });  
+            
+            // Add isotope click function 
+            $(".categori-filter1 li").on('click',function(){
+                $(".categori-filter1 li").removeClass("active");
+                $(this).addClass("active"); 
+                var selector = $(this).attr("data-filter");
+                $(".protfoli_inner1").isotope({
+                    filter: selector,
+                    animationOptions: {
+                        duration: 450,
+                        easing: "linear",
+                        queue: false,
+                    }
+                });
+                return false;
+            });  
+
+
+			$('.product-layout-slider').owlCarousel({
+				items:3,
+				loop:true,
+				margin:30,
+				autoplay:true,
+				autoplayTimeout:3000,
+				autoplayHoverPause:true,
+				responsive:{
+					0:{
+						items:1,
+						nav:true
+					},
+					600:{
+						items:3,
+					},
+					1000:{
+						items:3,
+					}
+				}
+			});
 		/* ==================================================
 			# Data Background
 		 ===============================================*/
@@ -18,28 +84,6 @@
 		$("[data-background]").each(function(){
 			$(this).css("background-image","url(" + $(this).attr("data-background") +")");
 		});
-		/* ==================================================
-			# Fun Factor Init
-		===============================================*/
-			$('.timer').countTo();
-			$('.fun-fact').appear(function() {
-				$('.timer').countTo();
-			}, {
-				accY: -100
-			});
-		
-		
-		/* ==================================================
-			# Wow Init
-		 ===============================================*/
-		var wow = new WOW({
-			boxClass: 'wow', // animated element css class (default is wow)
-			animateClass: 'animated', // animation css class (default is animated)
-			offset: 0, // distance to the element when triggering the animation (default is 0)
-			mobile: true, // trigger animations on mobile devices (default is true)
-			live: true // act on asynchronously loaded content (default is true)
-		});
-		wow.init();
 
 		/* ==================================================
 			# Smooth Scroll
@@ -55,61 +99,11 @@
 			event.preventDefault();
 		});
 
-		/* ==================================================
-			# Accordion Menu
-		 =============================================== */
+		
 
-		  $(document).on('click','.panel-group .panel',function(e) {
-			e.preventDefault();
-			$(this).addClass('panel-active').siblings().removeClass('panel-active');
-		});
-
-		/* ==================================================
-			# imagesLoaded active
-		===============================================*/
-		$('#portfolio-grid,.blog-masonry').imagesLoaded(function() {
-
-			/* Filter menu */
-			$('.mix-item-menu').on('click', 'button', function() {
-				var filterValue = $(this).attr('data-filter');
-				$grid.isotope({
-					filter: filterValue
-				});
-			});
-
-			/* filter menu active class  */
-			$('.mix-item-menu button').on('click', function(event) {
-				$(this).siblings('.active').removeClass('active');
-				$(this).addClass('active');
-				event.preventDefault();
-			});
-
-			/* Filter active */
-			var $grid = $('#portfolio-grid').isotope({
-				itemSelector: '.pf-item',
-				percentPosition: true,
-				masonry: {
-					columnWidth: '.pf-item',
-				}
-			});
-
-			/* Filter active */
-			$('.blog-masonry').isotope({
-				itemSelector: '.blog-item',
-				percentPosition: true,
-				masonry: {
-					columnWidth: '.blog-item',
-				}
-			});
-
-		});
-
-		/* ==================================================
-            # Partner Carousel
-         ===============================================*/
 		
 		$(".typed").typed({
-			strings: ["Fashion eCommerce ", "Electronics eCommerce", "Furniture eCommerce"],
+			strings: ["Fashion eCommerce ", "Electronics eCommerce", "Furniture eCommerce", "Grocery eCommerce", "Cosmetics eCommerce", "Hardware eCommerce", "Car Parts eCommerce"],
 			// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 			stringsElement: null,
 			// typing speed
@@ -142,34 +136,7 @@
 			resetCallback: function() {}
 		});
 		
-        /* ==================================================
-            # Partner Carousel
-         ===============================================*/
-		
-        $('.partner-sldr').owlCarousel({
-            loop: true,
-            margin:90,
-            nav: false,
-            navText: [
-                "<i class='icofont-long-arrow-left'></i>",
-                "<i class='icofont-long-arrow-right'></i>"
-            ],
-            dots: false,
-            autoplay: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 4
-                }
-            }
-        });
-        
-        
+
 		
         /* ==================================================
             # Hero Slider Carousel
@@ -316,16 +283,7 @@
           }
         }
 		
-		/* ==================================================
-			# Scroll to top
-		 =============================================== */
-        
-//		$('.wodryRX').wodry({
-//			animation: 'rotateX',
-//			delay: 1000,
-//			animationDuration: 800,
-//		});
-		
+
 		$('.wodryRX').wodry({
 			animation: 'rotateX',
 			delay: 2000,

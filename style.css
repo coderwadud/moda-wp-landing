@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
   Theme Name:  Software Landing Page
   Author: Kazi Sahiduzzman
@@ -41,7 +40,7 @@
      object-fit: cover;
 }
 .maan-product-thumb .swiper-button-next:after, .maan-product-thumb .swiper-container-rtl .swiper-button-prev:after {
-  content: "";
+  content: "\f060";
   font-family: "Font Awesome 5 Pro";
   font-weight: 500;
   height: 36px;
@@ -54,7 +53,7 @@
   color: #545454;
 }
 .maan-product-thumb .swiper-button-prev:after, .maan-product-thumb .swiper-container-rtl .swiper-button-next:after {
-  content: "";
+  content: "\f177";
   font-family: "Font Awesome 5 Pro";
   font-weight: 500;
   height: 36px;
@@ -612,7 +611,7 @@
 }
 
 .swiper-button-next:after {
-  content: "";
+  content: "\f178";
   font-family: "Font Awesome 5 Pro";
   font-weight: 300;
   height: 36px;
@@ -630,7 +629,7 @@
 }
 
 .swiper-button-prev:after {
-  content: "";
+  content: "\f177";
   font-family: "Font Awesome 5 Pro";
   font-weight: 300;
   height: 36px;
@@ -2621,9 +2620,21 @@ label {
 }
 
 .hero-btn a {
-  width: 180px;
-  padding: 25px !important;
-  height: 80px;
+  width: 180px !important;
+  padding: 5px !important;
+  font-family: var(--font-1);
+  height: 52px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px !important;
   text-align: center;
 }
 
@@ -3087,6 +3098,11 @@ button.navbar-toggler:focus {
 .menu-info .menu-info-bio h6 {
   font-weight: 700;
   margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   line-height: 1.7;
 }
 
@@ -3108,7 +3124,7 @@ button.navbar-toggler:focus {
   margin-left: 0.255em;
   vertical-align: 0;
   font-family: "Font Awesome 5 Free";
-  content: "";
+  content: "\f078";
   font-weight: 900;
   border: none;
 }
@@ -3676,6 +3692,7 @@ button.navbar-toggler:focus {
 /***inner-item***/
 .inner-item {
   text-align: center;
+  margin: 0 10px;
   margin-top: 50px;
   position: relative;
 }
@@ -3701,7 +3718,7 @@ button.navbar-toggler:focus {
 
 .inner-item a {
   display: block;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 600;
   color: #1d1d1d;
   font-family: "Jost", sans-serif;
@@ -4097,6 +4114,14 @@ footer::before {
           justify-content: center;
 }
 
+.product-layout-slider img {
+  height: 250px;
+}
+
+.product-layout-section {
+  padding: 80px 0;
+}
+
 /* CSS Document */
 /*-------------------------------------------------------
 23. Contact US css 
@@ -4256,7 +4281,7 @@ footer::before {
 }
 
 #colorOptionsSidebar span.active:after {
-  content: "";
+  content: "\f00c";
   top: 0;
   left: 0;
   width: 100%;
@@ -4614,4 +4639,50 @@ body.rtl-mode .price-wpr {
     height: auto;
   }
 }
-/*# sourceMappingURL=style.css.map */
+.categori-filter li {
+  display: inline-block;
+  padding: 5px 10px;
+  position: relative;
+}
+.categori-filter li:after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  background: #E60C5E;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.categori-filter li:hover:after, .categori-filter li.active:after {
+  width: 100%;
+}
+.categori-filter li:hover a, .categori-filter li.active a {
+  color: #E60C5E;
+}
+
+.categori-filter1 li {
+  display: inline-block;
+  padding: 5px 10px;
+  position: relative;
+}
+.categori-filter1 li:after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  background: #E60C5E;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.categori-filter1 li:hover:after, .categori-filter1 li.active:after {
+  width: 100%;
+}
+.categori-filter1 li:hover a, .categori-filter1 li.active a {
+  color: #E60C5E;
+}
